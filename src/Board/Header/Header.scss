@@ -1,0 +1,146 @@
+$headerFontSize: 32px;
+$ticColor: #1ac547;
+$toeColor: #ee231e;
+
+.header {
+    color: #FFF3B6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    @media (max-width: 600px) {
+        justify-content: center;
+    }
+
+    .player {
+        width: 33%;
+        position: relative;
+        @media (max-width: 600px) {
+            margin: 0 5px;
+            width: unset;
+        }
+
+        &__name {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: $headerFontSize;
+
+            @media (max-width: 768px) {
+                font-size: 28px;
+            }
+            @media (max-width: 425px) {
+                font-size: 24px;
+            }
+            .figure {
+                font-weight: bold;
+                margin-left: 10px;
+            }
+
+            svg {
+                width:  25px;
+                height: 25px;
+                fill: #fff;
+                margin-left: 5px;
+            }
+
+            
+        }
+
+        &-1 {
+            order: 0;
+            .figure {
+                color: $ticColor;
+            }
+        }
+        &-2 {
+            order: 0;
+            .figure {
+                color: $toeColor;
+            }
+        }
+    }
+
+    .player-1.active {
+        .player__name {
+            &::after {
+                content: '';
+                display: block;
+                height: 3px;
+                border-radius: 5px;
+                margin-top: 5px;
+                background: $ticColor;
+            }
+        }
+    }
+
+    .player-2.active {
+        .player__name {
+            &::after {
+                content: '';
+                display: block;
+                height: 3px;
+                border-radius: 5px;
+                margin-top: 5px;
+                background: $toeColor;
+            }
+        }
+    }
+
+    .mode {
+        @media (max-width: 600px) {
+            margin-top: 10px;
+            order: 1;
+        }
+    }
+
+    .walking-player {
+        margin: 0 10px;
+        font-size: $headerFontSize;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+        @media (max-width: 425px) {
+            font-size: 24px;
+        }
+
+        .name {
+            margin-left: 5px;
+        }
+    }
+
+    .select-mode {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5px;
+
+        span {
+            font-size: 24px;
+
+            @media (max-width: 768px) {
+                font-size: 22px;
+            }
+            @media (max-width: 425px) {
+                font-size: 22px;
+            }
+        }
+
+        .selectWith {
+            margin-left: 10px;
+        }
+
+        .selectWith {
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 2px solid #fff;
+            }
+        }
+    }
+}

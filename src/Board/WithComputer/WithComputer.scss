@@ -1,0 +1,72 @@
+.playWithComputer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .left-column {
+        color: #fff;
+        text-align: center;
+
+        &__title {
+            font-size: 26px;
+        }
+
+        .players_score {
+            display: flex;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            
+            .player-score {
+                font-size: 26px;
+                margin-right: 10px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                span {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .right-column {
+        .gameField {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 500px;
+    
+            .cell {
+                text-transform: uppercase;
+                font-size: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 150px;
+                border: 4px solid #3C3B61;
+                user-select: none;
+                cursor: pointer;
+
+                &.color-red {
+                    color: #ee231e;
+                }
+            }
+        }
+    
+        .replay {
+            display: block;
+            cursor: pointer;
+            font-size: 18px;
+            margin: auto;
+            margin-top: 10px;
+            border: 2px solid #3c3b61;
+            color: #fff;
+            border-radius: 5px;
+            background: transparent;
+            padding: 5px 10px;
+        }
+    }
+}
