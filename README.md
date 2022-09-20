@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# Игра "Крестики-нолики".
+---
+### Для начало выберите режим в котором хотите играть.
+#### В игре есть 2 режима игры игра _"с человеком"_ или _"с компьютером"_
+**Режим _"С человеком"_:**
+В этом режиме два игрока играют друг против друга, выигрывает тот игрок который наберет выигрышнуюю комбинацию. Задача каждого игрока набрать выигрышнуюю комбинацию и не давать сопернику сделать того же. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Режим _"С компьютером"_:**
+В этом режиме один игрок играет против компьютера, задача игрока обыграть компьютер, не дав сделать того же.
 
-## Available Scripts
+---
+###Дополнительные возможности игры :
+**1. Введение счета :**
+*Хотите посоревноваться кто лушче играет вы или ваш друг?* Не проблема в данной игре вы сможете сделать это. Для этого нужно свего лишь нужать на кнопку `Играть ещё раз`, в всплывающем окне после победы или ничьи игроков, так игра будет ввести счет, увеличивая счет победившего игрока на "1". Для сброса счета нужно просто выбрать `Начать заного`.
 
-In the project directory, you can run:
+**2. Смена имён игроков :**
+*Не хотите чтоб в игре вас звали "Игрок"?* Не проблема в игре доступно смена имени. Для этого нужно нажать на значек карандаша, после чего ввести имя в сплывающем окне, регистр первый буквы неважен, игра сам певедет его в верхний регистр."
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**3. Показ какой игрок ходит :**
+Чтобы игроки знали какой игрок ходит в данный момент в верхний часть экрана всегда отображается какой игрок ходит в данный момент.
