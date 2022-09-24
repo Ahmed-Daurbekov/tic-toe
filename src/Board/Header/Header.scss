@@ -9,14 +9,17 @@ $toeColor: #ee231e;
     justify-content: space-between;
     padding: 20px 0;
 
-    @media (max-width: 600px) {
+    @media (max-width: 655px) {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5px;
     }
 
     .player {
         width: 33%;
         position: relative;
-        @media (max-width: 600px) {
+        @media (max-width: 655px) {
             margin: 0 5px;
             width: unset;
         }
@@ -33,6 +36,7 @@ $toeColor: #ee231e;
             @media (max-width: 425px) {
                 font-size: 24px;
             }
+
             .figure {
                 font-weight: bold;
                 margin-left: 10px;
@@ -55,6 +59,10 @@ $toeColor: #ee231e;
             }
         }
         &-2 {
+            &_block {
+                display: flex;
+                justify-content: flex-end;
+            }
             order: 0;
             .figure {
                 color: $toeColor;
@@ -89,8 +97,7 @@ $toeColor: #ee231e;
     }
 
     .mode {
-        @media (max-width: 600px) {
-            margin-top: 10px;
+        @media (max-width: 655px) {
             order: 1;
         }
     }

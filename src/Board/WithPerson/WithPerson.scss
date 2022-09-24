@@ -3,6 +3,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 15px;
+
+    @media (max-width: 655px) {
+        margin-top: 0;
+    }
 
     .left-column {
         font-size: 26px;
@@ -11,9 +16,15 @@
 
         .players_score {
             display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
             margin-top: 5px;
             margin-bottom: 10px;
             
+            @media (max-width: 490px) {
+                flex-direction: column;
+            }
+
             .player-score {
                 margin-right: 10px;
 
@@ -24,12 +35,17 @@
                 span {
                     margin-left: 10px;
                 }
+
+                @media (max-width: 490px) {
+                    margin-right: 0;
+                }
             }
         }
         
         @media (max-width: 375px) {
             font-size: 24px;
         }
+
         @media (max-width: 320px) {
             font-size: 24px;
         }
@@ -58,19 +74,19 @@
                     color: #ee231e;
                 }
 
-                @media (max-width: 425px) {
+                @media (max-width: 490px) {
                     width: 120px;
                     height: 120px;
                     font-size: 100px;
                 }
 
-                @media (max-width: 375px) {
+                @media (max-width: 400px) {
                     width: 105px;
                     height: 105px;
                     font-size: 90px;
                 }
                 
-                @media (max-width: 320px) {
+                @media (max-width: 355px) {
                     width: 85px;
                     height: 85px;
                     font-size: 70px;

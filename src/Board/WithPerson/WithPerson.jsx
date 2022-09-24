@@ -79,7 +79,7 @@ const WithPerson = () => {
                     <div className="player-score player__1-score">
                         {player1 ? player1 : 'Игрок 1'}:
                         <span>{scorePlayer1}</span> /
-                    </div> 
+                    </div>
                     <div className="player-score player__2-score">
                         {player2 ? player2 : 'Игрок 2'}:
                         <span>{scorePlayer2}</span>

@@ -73,7 +73,7 @@ const Header = () => {
                 </div>
             </div>
             <div className={flag == 'toe' ? 'player player-2 active' : 'player player-2'}>
-                <div className="player-1_block">
+                <div className="player-2_block">
                     <div className="player__name">
                         <span>{player2 ? player2 : 'Игрок 2'}:</span> 
                         <span className='figure'>O</span>
