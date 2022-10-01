@@ -5,6 +5,17 @@ import DrawModalWindow from './DrawModalWindow/DrawModalWindow';
 import WinModalWindow from './WinModalWindow/WinModalWindow';
 
 const WithComputer = () => {
+    let cells
+    React.useEffect(() => {
+        cells = document.querySelectorAll('.cell')
+        cells.forEach(item => {
+            item.addEventListener('click', start)
+        })
+
+        return () => {
+            cells.forEach(item => item.removeEventListener('click', start))
+        }
+    })
     const [isWin, setWin] = React.useState(false)
     let {flag, setFlag} = React.useContext(WhoWalk)
     const [clickCount, setClickCount] = React.useState(0)
@@ -190,12 +201,13 @@ const WithComputer = () => {
             event.target.style.color = "#1ac547"
             event.target.innerHTML = "x"
             arr[event.target.id-1] = "x"
-        } else{
+        } else {
             return
         }
-        
         checkWin()
-
+        cells.forEach(cell => {
+            // cell.re
+        })
         setTimeout(() => {
             botZero()
             checkWin()
@@ -226,15 +238,15 @@ const WithComputer = () => {
             </div>
             <div className="right-column">
                 <div className="gameField">
-                    <div className="cell" id="1" onClick={e => start(e)}></div>
-                    <div className="cell" id="2" onClick={e => start(e)}></div>
-                    <div className="cell" id="3" onClick={e => start(e)}></div>
-                    <div className="cell" id="4" onClick={e => start(e)}></div>
-                    <div className="cell" id="5" onClick={e => start(e)}></div>
-                    <div className="cell" id="6" onClick={e => start(e)}></div>
-                    <div className="cell" id="7" onClick={e => start(e)}></div>
-                    <div className="cell" id="8" onClick={e => start(e)}></div>
-                    <div className="cell" id="9" onClick={e => start(e)}></div>
+                    <div className="cell" id="1" ></div>
+                    <div className="cell" id="2" ></div>
+                    <div className="cell" id="3" ></div>
+                    <div className="cell" id="4" ></div>
+                    <div className="cell" id="5" ></div>
+                    <div className="cell" id="6" ></div>
+                    <div className="cell" id="7" ></div>
+                    <div className="cell" id="8" ></div>
+                    <div className="cell" id="9" ></div>
                 </div>
                 <button className='replay' onClick={e => {
                     clearField()

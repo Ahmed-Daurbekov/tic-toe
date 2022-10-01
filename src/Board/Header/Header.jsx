@@ -12,6 +12,7 @@ const Header = () => {
 
     function renamePlayer1(e) {
         let name = prompt('Имя игрока 1')
+        name = name.trim()
         if (name) {
             name = name.slice(0, 1).toUpperCase() + name.slice(1)
             setPlayer1(name)
@@ -20,6 +21,7 @@ const Header = () => {
     
     function renamePlayer2(e) {
         let name = prompt('Имя игрока 2')
+        name = name.trim()
         if (name) {
             name = name.slice(0, 1).toUpperCase() + name.slice(1)
             setPlayer2(name)
@@ -31,7 +33,6 @@ const Header = () => {
         document.querySelectorAll('.selectWith').forEach(item => {
             item.classList.remove('active')
         })
-        console.log(e.target.id);
         setPlayWith(getId)
         setFlag('tic')
         if (getId == 'person') {
